@@ -68,16 +68,47 @@ namespace Calculator
 
             char[] lams = new char[1000];
             int forad = 0;
+            int forsub = 0;
+            int formul = 0;
+            int fordid = 0;
             string lamsz = txtCalc.Text;
-            for(int h = 0; h<lamsz.Length;h++) { lams.Append(lamsz[h]); }
-            foreach(char tr in lams) { if (tr == '+') { forad = forad + 1; } }
+            //for(int h = 0; h<lamsz.Length;h++) { lams.Append(lamsz[h]); }
+            foreach(char tr in lamsz) { if (tr == '+') { forad = forad + 1; } }
+            foreach (char tr in lamsz) { if (tr == '-') { forsub = forsub + 1; } }
+            foreach (char tr in lamsz) { if (tr == 'x') { formul = formul + 1; } }
+            foreach (char tr in lamsz) { if (tr == '÷') { fordid = fordid + 1; } }
+
+
             if (forad > 0)
             {
                 string lam = txtCalc.Text;
                 var adds = lam.Split('+');
-                int sums = Convert.ToInt32(adds[0]) + Convert.ToInt32(adds[1]);
+                double sums = Convert.ToDouble(adds[0]) + Convert.ToDouble(adds[1]);
                 txtCalc.Text = sums.ToString();
             }
+            else if (forsub > 0)
+            {
+                string lam = txtCalc.Text;
+                var adds = lam.Split('-');
+                double mins = Convert.ToDouble(adds[0]) - Convert.ToDouble(adds[1]);
+                txtCalc.Text = mins.ToString();
+            }
+            else if (formul > 0)
+            {
+                string lam = txtCalc.Text;
+                var adds = lam.Split('x');
+                double prods = Convert.ToDouble(adds[0]) * Convert.ToDouble(adds[1]);
+                txtCalc.Text = prods.ToString();
+            }
+            else if (fordid > 0)
+            {
+                string lam = txtCalc.Text;
+                var adds = lam.Split('÷');
+                double quos = Convert.ToDouble(adds[0]) / Convert.ToDouble(adds[1]);
+                txtCalc.Text = quos.ToString();
+            }
+
+
             else
             {
                 txtCalc.Text = txtCalc.Text;
@@ -112,12 +143,17 @@ namespace Calculator
 
         private void button8_Click(object sender, EventArgs e)
         {
-            txtCalc.Text += "*";
+            txtCalc.Text += "x";
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            txtCalc.Text += "/";
+            txtCalc.Text += "÷";
+        }
+
+        private void button20_Click(object sender, EventArgs e)
+        {
+            txtCalc.Text = "";
         }
     }
 }
