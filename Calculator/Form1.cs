@@ -20,53 +20,56 @@ namespace Calculator
             InitializeComponent();
         }
 
-
+        DataClass dc = new DataClass();
 
         private void button9_Click(object sender, EventArgs e)
         {
-            txtCalc.Text += "1";
+            txtCalc.Text += dc.num1.ToString();
 
 
         }
 
         private void button10_Click(object sender, EventArgs e)
         {
-            txtCalc.Text += "2";
+            txtCalc.Text += dc.num2.ToString();
         }
 
         private void button11_Click(object sender, EventArgs e)
         {
-            txtCalc.Text += "3";
+            txtCalc.Text += dc.num3.ToString();
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            txtCalc.Text += "4";
+            txtCalc.Text += dc.num4.ToString();
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
-            txtCalc.Text += "5";
+            txtCalc.Text += dc.num5.ToString();
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
-            txtCalc.Text += "6";
+            
+
+            txtCalc.Text += dc.num6.ToString();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            txtCalc.Text += "7";
+            
+            txtCalc.Text += dc.num7.ToString();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            txtCalc.Text += "8";
+            txtCalc.Text +=dc.num8.ToString();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            txtCalc.Text += "9";
+            txtCalc.Text += dc.num9.ToString();
 
         }
 
@@ -260,7 +263,7 @@ namespace Calculator
 
         private void button13_Click(object sender, EventArgs e)
         {
-            txtCalc.Text += "0";
+            txtCalc.Text += dc.num0.ToString();
         }
 
         private void button12_Click(object sender, EventArgs e)
