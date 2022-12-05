@@ -73,11 +73,6 @@ namespace Calculator
 
         }
 
-         
-
-
-
-
         private void button16_Click(object sender, EventArgs e)
         {
 
@@ -113,7 +108,6 @@ namespace Calculator
                 cb = 0;
             }
 
-
             //addition
             string[] lams = new string[1000];
             lams = lamsz.Split('+');
@@ -133,12 +127,6 @@ namespace Calculator
                 txtCalc.Text = result.ToString();
             }
 
-
-
-
-
-
-
             //subtraction
             string[] lamss = new string[1000];
             lamss = lamsz.Split('-');
@@ -157,9 +145,6 @@ namespace Calculator
                 result = Convert.ToDouble(lamss[0]) - Convert.ToDouble(lamss[1]);
                 txtCalc.Text = result.ToString();
             }
-
-
-
 
             //multiplication
             int formul = 0;
@@ -181,9 +166,6 @@ namespace Calculator
                 txtCalc.Text = result.ToString();
             }
 
-
-
-
             //division
             int fordid = 0;
             string[] lamssss = new string[1000];
@@ -202,13 +184,7 @@ namespace Calculator
                 txtCalc.Text = result.ToString();
             }
 
-
-
-
-
             //sqrt
-            
-
             int sq = 0;
             int addsq = 0;
             foreach (char i in txtCalc.Text)
@@ -236,24 +212,12 @@ namespace Calculator
             }
 
 
-           
-
-
-
-
-
-
         }
 
         private void button15_Click(object sender, EventArgs e)
         {
             int val = Convert.ToInt32(txtCalc.Text);
             txtCalc.Text += "+";
-
-
-
-
-
         }
 
         private void button14_Click(object sender, EventArgs e)
@@ -300,10 +264,5 @@ namespace Calculator
         {
             txtCalc.Text += "^³";
         }
-
-
-
-
-
     }
 }
