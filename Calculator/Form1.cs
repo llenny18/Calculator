@@ -67,6 +67,9 @@ namespace Calculator
         {
 
             string[] lams = new string[1000];
+            string[] lamss = new string[1000];
+            string[] lamsss = new string[1000];
+            string[] lamssss = new string[1000];
             int forad = 0;
             int forsub = 0;
             int formul = 0;
@@ -74,28 +77,73 @@ namespace Calculator
             double result;
             string lamsz = txtCalc.Text;
             lams = lamsz.Split('+');
+            lamss = lamsz.Split('-');
+            lamsss = lamsz.Split('x');
+            lamssss = lamsz.Split('÷');
 
-            foreach(char i in txtCalc.Text)
+            foreach (char i in txtCalc.Text)
             {
                 if (i == '+')
                 {
                     forad += 1;
                 }
             }
-
-            if (forad > 0)
+           
+            if (forsub > 0)
             {
                 result = Convert.ToDouble(lams[0]) + Convert.ToDouble(lams[1]);
                 txtCalc.Text = result.ToString();
             }
 
+            foreach (char i in txtCalc.Text)
+            {
+                if (i == '-')
+                {
+                    forsub += 1;
+                }
+            }
 
-           
+            if (forsub > 0)
+            {
+                result = Convert.ToDouble(lamss[0]) - Convert.ToDouble(lamss[1]);
+                txtCalc.Text = result.ToString();
+            }
+
+
+            foreach (char i in txtCalc.Text)
+            {
+                if (i == 'x')
+                {
+                    formul += 1;
+                }
+            }
+
+            if (formul > 0)
+            {
+                result = Convert.ToDouble(lamsss[0]) * Convert.ToDouble(lamsss[1]);
+                txtCalc.Text = result.ToString();
+            }
+
+            foreach (char i in txtCalc.Text)
+            {
+                if (i == '÷')
+                {
+                    fordid += 1;
+                }
+            }
+
+            if (fordid > 0)
+            {
+                result = Convert.ToDouble(lamssss[0]) / Convert.ToDouble(lamssss[1]);
+                txtCalc.Text = result.ToString();
+            }
+
+
 
 
 
         }
-          
+
         private void button15_Click(object sender, EventArgs e)
         {
             int val = Convert.ToInt32(txtCalc.Text);
