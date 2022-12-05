@@ -9,5 +9,7 @@ namespace Calculator
     internal class FunctionClass
     {
 
+
+
     }
 }

@@ -86,7 +86,7 @@ namespace Calculator
 
             if (forad > 0)
             {
-                result = Convert.ToDouble(lamss[0]) - Convert.ToDouble(lamss[1]);
+                result = Convert.ToDouble(lams[0]) + Convert.ToDouble(lams[1]);
                 txtCalc.Text = result.ToString();
             }
 
