@@ -12,6 +12,8 @@ namespace Calculator
 {
     public partial class Form1 : Form
     {
+
+        DataClass num = new DataClass()
         public Form1()
         {
             InitializeComponent();
@@ -19,7 +21,7 @@ namespace Calculator
 
         private void button9_Click(object sender, EventArgs e)
         {
-            txtCalc.Text += "1";
+            txtCalc.Text += num.;
         }
 
         private void button10_Click(object sender, EventArgs e)
