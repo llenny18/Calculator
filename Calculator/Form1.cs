@@ -21,7 +21,7 @@ namespace Calculator
 
         private void button9_Click(object sender, EventArgs e)
         {
-            txtCalc.Text += num.;
+            txtCalc.Text += Convert.ToInt32(num.num1);
         }
 
         private void button10_Click(object sender, EventArgs e)
@@ -180,7 +180,6 @@ namespace Calculator
         {
             int val = Convert.ToInt32(txtCalc.Text);
             txtCalc.Text += "+";
-
 
 
 
