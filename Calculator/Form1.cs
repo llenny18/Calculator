@@ -66,21 +66,16 @@ namespace Calculator
         private void button16_Click(object sender, EventArgs e)
         {
 
-            string[] lams = new string[1000];
-            string[] lamss = new string[1000];
-            string[] lamsss = new string[1000];
-            string[] lamssss = new string[1000];
-            int forad = 0;
-            int forsub = 0;
-            int formul = 0;
-            int fordid = 0;
+
+
             double result;
             string lamsz = txtCalc.Text;
-            lams = lamsz.Split('+');
-            lamss = lamsz.Split('-');
-            lamsss = lamsz.Split('x');
-            lamssss = lamsz.Split('÷');
 
+            //addition
+            string[] lams = new string[1000];
+            lams = lamsz.Split('+');
+            int forad = 0;
+           
             foreach (char i in txtCalc.Text)
             {
                 if (i == '+')
@@ -88,13 +83,24 @@ namespace Calculator
                     forad += 1;
                 }
             }
-           
-            if (forsub > 0)
+
+            if (forad > 0)
             {
-                result = Convert.ToDouble(lams[0]) + Convert.ToDouble(lams[1]);
+                result = Convert.ToDouble(lamss[0]) - Convert.ToDouble(lamss[1]);
                 txtCalc.Text = result.ToString();
             }
 
+
+
+
+
+
+
+            //subtraction
+            string[] lamss = new string[1000];
+            lamss = lamsz.Split('-');
+
+            int forsub = 0;
             foreach (char i in txtCalc.Text)
             {
                 if (i == '-')
@@ -110,6 +116,14 @@ namespace Calculator
             }
 
 
+
+
+            //multiplication
+            int formul = 0;
+            string[] lamsss = new string[1000];
+            lamsss = lamsz.Split('x');
+           
+
             foreach (char i in txtCalc.Text)
             {
                 if (i == 'x')
@@ -124,6 +138,13 @@ namespace Calculator
                 txtCalc.Text = result.ToString();
             }
 
+
+
+
+            //division
+            int fordid = 0;
+            string[] lamssss = new string[1000];
+            lamssss = lamsz.Split('÷');
             foreach (char i in txtCalc.Text)
             {
                 if (i == '÷')
@@ -139,6 +160,15 @@ namespace Calculator
             }
 
 
+            string[] sqrts = new string[1000];
+            
+            
+
+           
+
+
+
+           
 
 
 
@@ -183,6 +213,21 @@ namespace Calculator
         private void button20_Click(object sender, EventArgs e)
         {
             txtCalc.Text = "";
+        }
+
+        private void button19_Click(object sender, EventArgs e)
+        {
+            txtCalc.Text = "√" + txtCalc.Text;
+        }
+
+        private void button18_Click(object sender, EventArgs e)
+        {
+            txtCalc.Text += "^2";
+        }
+
+        private void button17_Click(object sender, EventArgs e)
+        {
+            txtCalc.Text += "^3";
         }
     }
 }

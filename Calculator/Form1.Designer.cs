@@ -165,6 +165,7 @@
             this.button19.TabIndex = 0;
             this.button19.Text = "√";
             this.button19.UseVisualStyleBackColor = false;
+            this.button19.Click += new System.EventHandler(this.button19_Click);
             // 
             // button18
             // 
@@ -172,13 +173,14 @@
             this.button18.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button18.FlatAppearance.BorderSize = 0;
             this.button18.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button18.Font = new System.Drawing.Font("Aileron Black", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button18.Font = new System.Drawing.Font("Aileron Black", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button18.Location = new System.Drawing.Point(186, 104);
             this.button18.Name = "button18";
             this.button18.Size = new System.Drawing.Size(75, 43);
             this.button18.TabIndex = 0;
             this.button18.Text = "x^2";
             this.button18.UseVisualStyleBackColor = false;
+            this.button18.Click += new System.EventHandler(this.button18_Click);
             // 
             // button17
             // 
@@ -186,13 +188,14 @@
             this.button17.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button17.FlatAppearance.BorderSize = 0;
             this.button17.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button17.Font = new System.Drawing.Font("Aileron Black", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button17.Font = new System.Drawing.Font("Aileron Black", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button17.Location = new System.Drawing.Point(268, 104);
             this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(71, 43);
+            this.button17.Size = new System.Drawing.Size(79, 43);
             this.button17.TabIndex = 0;
-            this.button17.Text = "TBD";
+            this.button17.Text = "x^3";
             this.button17.UseVisualStyleBackColor = false;
+            this.button17.Click += new System.EventHandler(this.button17_Click);
             // 
             // button4
             // 
