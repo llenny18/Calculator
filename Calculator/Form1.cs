@@ -66,15 +66,34 @@ namespace Calculator
         private void button16_Click(object sender, EventArgs e)
         {
 
-            char[] lams = new char[1000];
+            string[] lams = new string[1000];
             int forad = 0;
             int forsub = 0;
             int formul = 0;
             int fordid = 0;
             double result;
             string lamsz = txtCalc.Text;
+            lams = lamsz.Split('+');
 
-            result = double.Parse(lamsz);
+            foreach(char i in txtCalc.Text)
+            {
+                if (i == '+')
+                {
+                    forad += 1;
+                }
+            }
+
+            if (forad > 0)
+            {
+                result = Convert.ToDouble(lams[0]) + Convert.ToDouble(lams[1]);
+                txtCalc.Text = result.ToString();
+            }
+
+
+           
+
+
+
         }
           
         private void button15_Click(object sender, EventArgs e)

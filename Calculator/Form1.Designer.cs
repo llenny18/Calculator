@@ -163,7 +163,7 @@
             this.button19.Name = "button19";
             this.button19.Size = new System.Drawing.Size(71, 43);
             this.button19.TabIndex = 0;
-            this.button19.Text = "TBD";
+            this.button19.Text = "√";
             this.button19.UseVisualStyleBackColor = false;
             // 
             // button18
@@ -173,11 +173,11 @@
             this.button18.FlatAppearance.BorderSize = 0;
             this.button18.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button18.Font = new System.Drawing.Font("Aileron Black", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button18.Location = new System.Drawing.Point(190, 104);
+            this.button18.Location = new System.Drawing.Point(186, 104);
             this.button18.Name = "button18";
-            this.button18.Size = new System.Drawing.Size(71, 43);
+            this.button18.Size = new System.Drawing.Size(75, 43);
             this.button18.TabIndex = 0;
-            this.button18.Text = "TBD";
+            this.button18.Text = "x^2";
             this.button18.UseVisualStyleBackColor = false;
             // 
             // button17
