@@ -4,24 +4,29 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Calculator
 {
+
     public partial class Form1 : Form
     {
-
-        DataClass num = new DataClass()
         public Form1()
         {
             InitializeComponent();
         }
 
+
+
         private void button9_Click(object sender, EventArgs e)
         {
-            txtCalc.Text += Convert.ToInt32(num.num1);
+            txtCalc.Text += "1";
+
+
         }
 
         private void button10_Click(object sender, EventArgs e)
@@ -62,22 +67,55 @@ namespace Calculator
         private void button3_Click(object sender, EventArgs e)
         {
             txtCalc.Text += "9";
-            
+
         }
+
+
+
+
+
 
         private void button16_Click(object sender, EventArgs e)
         {
 
-
-
             double result;
             string lamsz = txtCalc.Text;
+
+
+
+
+            int cb = 0;
+            int addcb = 0;
+            foreach (char o in txtCalc.Text)
+            {
+
+                if (o == '^')
+                {
+                    cb += 1;
+
+                }
+                else if (o == '³')
+                {
+                    cb += 1;
+                    txtCalc.Text = txtCalc.Text.Remove(addcb - 1);
+                }
+
+                addcb += 1;
+            }
+
+            if (cb > 1)
+            {
+                result = Convert.ToDouble(txtCalc.Text) * Convert.ToDouble(txtCalc.Text) * Convert.ToDouble(txtCalc.Text);
+                txtCalc.Text = result.ToString();
+                cb = 0;
+            }
+
 
             //addition
             string[] lams = new string[1000];
             lams = lamsz.Split('+');
             int forad = 0;
-           
+
             foreach (char i in txtCalc.Text)
             {
                 if (i == '+')
@@ -124,7 +162,7 @@ namespace Calculator
             int formul = 0;
             string[] lamsss = new string[1000];
             lamsss = lamsz.Split('x');
-           
+
 
             foreach (char i in txtCalc.Text)
             {
@@ -162,15 +200,43 @@ namespace Calculator
             }
 
 
-            string[] sqrts = new string[1000];
+
+
+
+            //sqrt
             
-            
+
+            int sq = 0;
+            int addsq = 0;
+            foreach (char i in txtCalc.Text)
+            {
+                
+                if (i == '^')
+                {
+                    sq += 1;
+                    txtCalc.Text = txtCalc.Text.Remove(addsq);
+                }
+                else if (i == '²')
+                {
+                    sq += 1;
+                   
+                }
+
+                addsq += 1;
+            }
+
+            if (sq >1)
+            {
+                result = Convert.ToDouble(txtCalc.Text) * Convert.ToDouble(txtCalc.Text);
+                txtCalc.Text = result.ToString();
+                sq = 0;
+            }
+
 
            
 
 
 
-           
 
 
 
@@ -180,6 +246,7 @@ namespace Calculator
         {
             int val = Convert.ToInt32(txtCalc.Text);
             txtCalc.Text += "+";
+
 
 
 
@@ -223,12 +290,17 @@ namespace Calculator
 
         private void button18_Click(object sender, EventArgs e)
         {
-            txtCalc.Text += "^2";
+            txtCalc.Text += "^²";
         }
 
         private void button17_Click(object sender, EventArgs e)
         {
-            txtCalc.Text += "^3";
+            txtCalc.Text += "^³";
         }
+
+
+
+
+
     }
 }

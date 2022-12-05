@@ -178,7 +178,7 @@
             this.button18.Name = "button18";
             this.button18.Size = new System.Drawing.Size(75, 43);
             this.button18.TabIndex = 0;
-            this.button18.Text = "x^2";
+            this.button18.Text = "x^²";
             this.button18.UseVisualStyleBackColor = false;
             this.button18.Click += new System.EventHandler(this.button18_Click);
             // 
@@ -193,7 +193,7 @@
             this.button17.Name = "button17";
             this.button17.Size = new System.Drawing.Size(79, 43);
             this.button17.TabIndex = 0;
-            this.button17.Text = "x^3";
+            this.button17.Text = "x^³";
             this.button17.UseVisualStyleBackColor = false;
             this.button17.Click += new System.EventHandler(this.button17_Click);
             // 
